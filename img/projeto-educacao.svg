@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<rect width="800" height="500" fill="#eef5ff"/>
+<rect x="155" y="305" width="490" height="55" rx="14" fill="#c8a06a"/>
+<rect x="235" y="250" width="145" height="40" rx="8" fill="#ffffff" stroke="#176b5c" stroke-width="5"/>
+<rect x="420" y="250" width="145" height="40" rx="8" fill="#ffffff" stroke="#176b5c" stroke-width="5"/>
+<circle cx="310" cy="185" r="48" fill="#f4c7a1"/><path d="M263 178c8-49 83-56 96 2-22-11-60-10-96-2Z" fill="#5b3a29"/>
+<path d="M260 305c6-90 20-118 50-118s44 28 50 118Z" fill="#176b5c"/>
+<circle cx="490" cy="185" r="48" fill="#dca477"/><path d="M442 178c11-45 82-53 96 0-30-10-60-9-96 0Z" fill="#2a211d"/>
+<path d="M440 305c7-90 20-118 50-118s44 28 50 118Z" fill="#f0b94a"/>
+<text x="400" y="90" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700" fill="#176b5c">Projeto Educação</text>
+</svg>

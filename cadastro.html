@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se para participar das ações de voluntariado da ONG Esperança.">
+    <title>Cadastro de Voluntário | ONG Esperança</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="index.html" aria-label="ONG Esperança - página inicial">
+                <span class="brand-mark" aria-hidden="true">OE</span>
+                <span>ONG Esperança</span>
+            </a>
+
+            <nav aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html" aria-current="page">Seja voluntário</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro" aria-labelledby="page-title">
+            <div class="container narrow">
+                <p class="eyebrow">Engajamento</p>
+                <h1 id="page-title">Quero ser voluntário</h1>
+                <p>
+                    Preencha seus dados para que possamos conhecer você e encontrar oportunidades de participação.
+                </p>
+            </div>
+        </section>
+
+        <section class="section form-section" aria-labelledby="form-title">
+            <div class="container form-layout">
+                <div class="form-intro">
+                    <figure class="image-card">
+                        <img src="img/seja-voluntario.svg" alt="Pessoas colaborando em uma atividade voluntária da ONG Esperança">
+                        <figcaption>Seu tempo e suas habilidades podem fazer diferença.</figcaption>
+                    </figure>
+
+                    <aside class="tip-card">
+                        <h2 id="form-title">Cadastro de voluntário</h2>
+                        <p>Os campos marcados com * são obrigatórios.</p>
+                        <p>Use dados verdadeiros para facilitar nosso contato.</p>
+                    </aside>
+                </div>
+
+                <form id="volunteerForm" class="volunteer-form" action="#" method="post">
+                    <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+
+                        <div class="form-grid">
+                            <div class="field field-full">
+                                <label for="nome">Nome completo *</label>
+                                <input type="text" id="nome" name="nome" autocomplete="name" minlength="3" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" autocomplete="email" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="dataNascimento">Data de nascimento *</label>
+                                <input type="date" id="dataNascimento" name="dataNascimento" autocomplete="bday" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="cpf">CPF *</label>
+                                <input type="text" id="cpf" name="cpf" inputmode="numeric" autocomplete="off" maxlength="14" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="000.000.000-00" required>
+                                <small>Formato: 000.000.000-00</small>
+                            </div>
+
+                            <div class="field">
+                                <label for="telefone">Telefone *</label>
+                                <input type="tel" id="telefone" name="telefone" inputmode="tel" autocomplete="tel" maxlength="15" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(62) 99999-9999" required>
+                                <small>Formato: (00) 00000-0000</small>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="cep">CEP *</label>
+                                <input type="text" id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" maxlength="9" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000" required>
+                                <small>Formato: 00000-000</small>
+                            </div>
+
+                            <div class="field field-grow">
+                                <label for="endereco">Endereço *</label>
+                                <input type="text" id="endereco" name="endereco" autocomplete="street-address" required>
+                            </div>
+
+                            <div class="field field-small">
+                                <label for="numero">Número *</label>
+                                <input type="number" id="numero" name="numero" min="1" max="99999" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="cidade">Cidade *</label>
+                                <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="estado">Estado *</label>
+                                <select id="estado" name="estado" autocomplete="address-level1" required>
+                                    <option value="">Selecione</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Participação</legend>
+
+                        <div class="form-grid">
+                            <div class="field field-full">
+                                <label for="area">Área de interesse *</label>
+                                <select id="area" name="area" required>
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="alimentacao">Campanhas de alimentação</option>
+                                    <option value="educacao">Ações de educação</option>
+                                    <option value="comunidade">Ações comunitárias</option>
+                                    <option value="eventos">Eventos e mobilização</option>
+                                </select>
+                            </div>
+
+                            <div class="field field-full">
+                                <label for="mensagem">Conte um pouco sobre você</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" maxlength="500" placeholder="Fale sobre suas habilidades, disponibilidade ou experiências que possam contribuir com a ONG."></textarea>
+                            </div>
+
+                            <div class="field field-full checkbox-field">
+                                <input type="checkbox" id="termos" name="termos" required>
+                                <label for="termos">Declaro que as informações fornecidas são verdadeiras e concordo com o contato da ONG. *</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button class="button button-primary" type="submit">Enviar cadastro</button>
+                        <button class="button button-secondary" type="reset">Limpar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 ONG Esperança. Todos os direitos reservados.</p>
+            <p><a href="index.html">Voltar ao início</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<rect width="800" height="500" fill="#edf8f5"/>
+<rect x="120" y="285" width="560" height="120" rx="24" fill="#ffffff" stroke="#176b5c" stroke-width="6"/>
+<path d="M175 285l90-85 90 85M445 285l90-85 90 85" fill="#f0b94a" stroke="#176b5c" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="250" cy="155" r="42" fill="#f4c7a1"/><circle cx="400" cy="130" r="42" fill="#dca477"/><circle cx="550" cy="155" r="42" fill="#8d5a3d"/>
+<path d="M212 285c5-66 17-84 38-84s33 18 38 84M362 285c5-66 17-84 38-84s33 18 38 84M512 285c5-66 17-84 38-84s33 18 38 84" fill="#176b5c"/>
+<text x="400" y="455" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700" fill="#176b5c">Projeto Comunidade</text>
+</svg>
