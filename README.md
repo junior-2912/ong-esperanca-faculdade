@@ -2,7 +2,7 @@
 
 Aplicação web desenvolvida para a ONG Esperança, com o objetivo de apresentar a instituição, seus projetos sociais e permitir o cadastro de pessoas interessadas em participar das ações.
 
-O projeto foi desenvolvido inicialmente com HTML5 semântico e CSS3 responsivo e, posteriormente, evoluído para uma aplicação dinâmica utilizando JavaScript, com navegação em formato SPA, manipulação do DOM, validação de formulários, renderização por templates e persistência local dos dados.
+O projeto foi desenvolvido com HTML5 semântico, CSS3 responsivo e JavaScript, utilizando o Vite como ferramenta de build. A configuração mantém as três páginas HTML como entradas independentes e aplica otimizações de produção aos recursos CSS e JavaScript.
 
 ## Funcionalidades
 
@@ -12,23 +12,17 @@ O projeto foi desenvolvido inicialmente com HTML5 semântico e CSS3 responsivo e
 * Validação dos campos do formulário.
 * Máscaras para CPF, telefone e CEP.
 * Feedback visual para campos inválidos.
-* Navegação entre seções sem recarregamento completo da página.
-* Renderização dinâmica dos conteúdos através do JavaScript.
-* Persistência dos cadastros utilizando `localStorage`.
-* Recuperação dos dados armazenados durante o carregamento inicial.
-* Tratamento da navegação pelos botões voltar e avançar do navegador.
+* Build de produção e minificação com Vite.
 
 ## Tecnologias utilizadas
 
 * HTML5
 * CSS3
 * JavaScript (ES6+)
+* Vite
 * DOM API
-* Web Storage API (`localStorage`)
-* History API (`pushState` e `popstate`)
-* JSON (`JSON.stringify` e `JSON.parse`)
 
-Não foram utilizadas bibliotecas, frameworks ou dependências externas.
+O Vite é utilizado como dependência de desenvolvimento para processar e otimizar os ficheiros durante a build.
 
 ## Pré-requisitos
 
@@ -36,9 +30,9 @@ Para executar o projeto é necessário apenas:
 
 * Navegador moderno com suporte a JavaScript ES6+.
 * Editor de código, como IntelliJ IDEA, VS Code ou equivalente.
-* Python 3, caso seja utilizado um servidor HTTP local.
+* Node.js 20.19+ ou 22.12+ e npm.
 
-Não é necessário instalar pacotes com NPM nem configurar banco de dados ou servidor backend.
+Não é necessário configurar banco de dados ou servidor backend.
 
 ## Estrutura do projeto
 
@@ -48,6 +42,8 @@ ong-esperanca/
 ├── projetos.html
 ├── cadastro.html
 ├── README.md
+├── package.json
+├── vite.config.js
 ├── css/
 │   └── style.css
 ├── js/
@@ -66,51 +62,38 @@ A pasta `css` concentra os estilos visuais, `js` contém as funcionalidades e re
 
 Clone ou copie o projeto para sua máquina e abra a pasta raiz no editor de sua preferência.
 
-Para uma execução simples, o arquivo `index.html` pode ser aberto diretamente no navegador. Entretanto, recomenda-se utilizar um servidor HTTP local para reproduzir um ambiente mais próximo de uma aplicação web real.
-
-### Servidor HTTP com Python
-
-No terminal, dentro da pasta do projeto:
+Instale as dependências e inicie o servidor de desenvolvimento:
 
 ```bash
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Depois, acesse:
+Depois, acesse o endereço apresentado pelo Vite, normalmente `http://localhost:5173`.
 
-```text
-http://localhost:8000
+### Build de produção
+
+Para gerar a versão otimizada:
+
+```bash
+npm run build
 ```
 
-Para encerrar o servidor:
+O Vite cria a pasta `dist/` com as três páginas, os estilos e os scripts processados e minificados. Para pré-visualizar essa versão:
 
 ```text
-Ctrl + C
+npm run preview
 ```
 
 ## Dependências
 
-O projeto não possui dependências externas.
-
-Não existe arquivo `package.json`, portanto não é necessário executar:
+As dependências são instaladas com:
 
 ```bash
 npm install
 ```
 
-Todo o funcionamento utiliza APIs e recursos nativos do navegador.
-
-## Build
-
-Como a aplicação utiliza JavaScript puro e não possui um bundler, como Vite, Webpack ou Parcel, não existe uma etapa de compilação ou geração de build.
-
-A versão executável do projeto é formada pelos próprios arquivos:
-
-```text
-HTML + CSS + JavaScript + imagens
-```
-
-Assim, não há um comando de build obrigatório.
+O projeto não utiliza frameworks de interface nem dependências de runtime. O Vite é uma dependência de desenvolvimento usada exclusivamente para a build e o servidor local.
 
 ## Testes e validação
 
@@ -123,11 +106,7 @@ A validação foi realizada principalmente por meio de testes funcionais no nave
 * Formatos de e-mail, CPF, telefone e CEP.
 * Aplicação das máscaras durante o evento `input`.
 * Comportamento do evento `submit`.
-* Navegação entre as rotas.
-* Botões voltar e avançar do navegador.
-* Persistência e recuperação de dados no `localStorage`.
 * Renderização dos elementos no DOM.
-* Tratamento de cenários sem dados armazenados.
 
 O navegador também foi utilizado para diagnóstico por meio do **Console**, **DevTools**, inspeção do DOM, armazenamento local e **Debugger/breakpoints**.
 
